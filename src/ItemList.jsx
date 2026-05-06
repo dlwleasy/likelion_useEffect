@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 const ItemList = () => {
   const [items, setItems] = useState(["사과", "바나나", "오렌지"]);
+  //처음 값을 넣을때 의존성 변경을 감지해서 뜨는 것
+  //주소가 바뀌는 것을 감지해서 뜨는 것, 새 배열 반환해서 불변성 유지
   useEffect(() => {
     console.log("useEffect실행");
   }, [items]);
